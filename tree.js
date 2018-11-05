@@ -3,7 +3,7 @@ function Tree() {
 }
 
 Tree.prototype.traverse = function() {
-    this.root.visit()
+    this.root.visit(this.root)
 }
 
 Tree.prototype.search = function(val) {
@@ -16,6 +16,8 @@ Tree.prototype.addValue = function(val) {
     if (this.root == null)
     {
 	this.root = n
+	this.root.x = width/2
+	this.root.y = 16 // WHy 16?
     }
     else
     {
