@@ -1,11 +1,14 @@
 var tree
 
 function setup() {
-    noCanvas() // Stops P5 program from requiring a canvas
+   noCanvas() // Stops P5 program from requiring a canvas
+   // createCanvas(400, 400)
+    background(51)
+    console.log('working!')
     tree = new Tree() // Creates a tree object to hold our data
     for (var i=0; i < 10; i++) // Adds 10 random numbers between 0 and 100 inclusive(?) to BST to be traversed
     {
-	tree.addValue(floor(random(0,100))
+	tree.addValue(floor(random(0,100)))
     }
     console.log(tree)
     tree.traverse() // Traverses and prints out the path
@@ -20,3 +23,4 @@ function setup() {
 	console.log(result)
     }
 }
+
